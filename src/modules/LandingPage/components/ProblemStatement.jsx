@@ -11,7 +11,7 @@ import React from 'react'
 
 export default function ProblemStatement({ ...rest }) {
   return (
-    <Stack pt={64} w="full" {...rest}>
+    <Stack pt={44} w="full" {...rest}>
       <HStack
         w="full"
         px="5%"
@@ -21,12 +21,12 @@ export default function ProblemStatement({ ...rest }) {
         bg="teal.700"
         py={12}
       >
-        <HStack spacing={16} w="full" maxW="6xl" justify="space-between">
-          <Stack pos="relative" w="full">
-            <Image mt="-16.5rem" w="33rem" src="/images/frowning-lady.png" />
+        <HStack spacing={12} w="full" maxW="6xl" justify="space-between">
+          <Stack pos="relative" w="55%">
+            <Image mt="-12.6rem" w="40rem" src="/images/frowning-lady.png" />
           </Stack>
 
-          <Stack textAlign="left" spacing={6} color="white" w="full" py={8}>
+          <Stack textAlign="left" spacing={6} color="white" w="45%" py={8}>
             <Heading>
               These kind of statements <br /> should no longer exist in 2021
             </Heading>

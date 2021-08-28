@@ -30,15 +30,15 @@ export default function Navbar({ ...rest }) {
       pos="fixed"
       top={0}
       w="full"
-      py={pastTop ? 4 : 3}
+      py={pastTop ? 2 : 1}
       justify="center"
       px="5%"
       {...rest}
     >
       <HStack w="full" maxW="6xl" justify="space-between">
         <HStack spacing={12}>
-          <Logo w={40} />
-          <HStack spacing={12} pt={2}>
+          <Logo w={24} />
+          <HStack spacing={12}>
             <Link href="/about-us">
               <ChakraLink fontWeight="600" color="gray.600">
                 About Us

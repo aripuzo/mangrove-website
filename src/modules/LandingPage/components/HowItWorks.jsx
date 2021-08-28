@@ -33,12 +33,13 @@ const howItWorks = [
 export default function HowItWorks({ ...rest }) {
   return (
     <VStack py={24} px="5%" {...rest}>
-      <Stack w="full" maxW="6xl" spacing={16} align="center">
+      <Stack w="full" spacing={16} align="center">
         <Heading color="teal.700">How it works</Heading>
 
         <Grid w="full" templateColumns="repeat(3, 1fr)" gap={20}>
           {howItWorks.map(({ icon, text }, index) => (
             <Stack
+              key={index}
               border="1px solid lightgray"
               w="100%"
               h="22rem"
@@ -55,6 +56,7 @@ export default function HowItWorks({ ...rest }) {
                     borderColor="teal.500"
                     size="5.6rem"
                     ml="0.5px"
+                    mt="0.5px"
                   >
                     {icon}
                   </Circle>

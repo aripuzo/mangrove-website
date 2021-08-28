@@ -21,8 +21,18 @@ import {
 import { Logo } from './Logo'
 
 export const Footer = ({ ...rest }) => (
-  <Box>
-    <Stack pt={24} pb={36} bg="pink.50" align="center" px="5%" spacing={0}>
+  <Box {...rest}>
+    <Stack
+      pt={24}
+      pb={36}
+      bg="orange.50"
+      bgSize="contain"
+      bgRepeat="no-repeat"
+      bgImage="url(/illustrations/footer-bg.png)"
+      align="center"
+      px="5%"
+      spacing={0}
+    >
       <VStack w="full" maxW="6xl">
         <Heading textAlign="center" color="teal.700" fontSize="6xl">
           Get&nbsp;
@@ -53,15 +63,9 @@ export const Footer = ({ ...rest }) => (
       </VStack>
     </Stack>
     <Stack w="full" align="center">
-      <HStack
-        py={16}
-        w="full"
-        maxW="6xl"
-        justify="space-between"
-        align="flex-start"
-      >
-        <Stack spacing={6}>
-          <Logo w={40} />
+      <HStack py={16} w="full" maxW="6xl" justify="space-between">
+        <Stack spacing={4}>
+          <Logo w={32} />
           <HStack spacing={12}>
             <HStack spacing={12} pt={2}>
               <Link href="/about-us">
