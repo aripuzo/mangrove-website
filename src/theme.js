@@ -18,6 +18,18 @@ const breakpoints = createBreakpoints({
 const theme = extendTheme({
   colors: {
     black: '#16161D',
+    dullTeal: {
+      50: '#e5f8f8',
+      100: '#cde3e3',
+      200: '#b0cece',
+      300: '#93baba',
+      400: '#76a6a6',
+      500: '#5c8c8c',
+      600: '#476e6e',
+      700: '#314f4f',
+      800: '#193030',
+      900: '#001212',
+    },
   },
   fonts,
   breakpoints,

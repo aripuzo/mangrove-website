@@ -35,6 +35,38 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </ColorModeProvider>
       </ChakraProvider>
+      <style jsx global>{`
+        *:focus {
+          box-shadow: none !important;
+        }
+
+        body {
+          scroll-behavior: smooth;
+        }
+        .container-body::-webkit-scrollbar {
+          width: 5px;
+          height: 6px;
+        }
+        .container-body::-moz-scrollbar {
+          width: 5px;
+          height: 6px;
+        }
+        /* Track */
+        .container-body::-webkit-scrollbar-track {
+          background: ${theme.colors.gray[100]};
+        }
+
+        /* Handle */
+        .container-body::-webkit-scrollbar-thumb {
+          background: ${theme.colors.gray[300]};
+          border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        .container-body::-webkit-scrollbar-thumb:hover {
+          background: ${theme.colors.gray[400]};
+        }
+      `}</style>
     </>
   )
 }
