@@ -23,10 +23,10 @@ import { Logo } from './Logo'
 export const Footer = ({ ...rest }) => (
   <Box {...rest}>
     <Stack
-      pt={24}
-      pb={36}
+      pt={[12, 24]}
+      pb={[16, 36]}
       bg="orange.50"
-      bgSize="contain"
+      bgSize={['cover', 'contain']}
       bgRepeat="no-repeat"
       bgImage="url(/illustrations/footer-bg.png)"
       align="center"
@@ -34,7 +34,11 @@ export const Footer = ({ ...rest }) => (
       spacing={0}
     >
       <VStack w="full" maxW="6xl">
-        <Heading textAlign="center" color="teal.700" fontSize="6xl">
+        <Heading
+          textAlign="center"
+          color="teal.700"
+          fontSize={['4xl', '4xl', '6xl']}
+        >
           Get&nbsp;
           <Box as="span" color="dullTeal.200">
             Value&nbsp;
@@ -44,7 +48,7 @@ export const Footer = ({ ...rest }) => (
             money
           </Box>
         </Heading>
-        <Text pb={4} color="gray.600" fontSize="4xl">
+        <Text pb={4} color="gray.600" fontSize={['xl', '2xl', '4xl']}>
           with&nbsp;
           <Box as="span" fontWeight="bold" color="teal.500">
             0.5%
@@ -62,19 +66,26 @@ export const Footer = ({ ...rest }) => (
         </Button>
       </VStack>
     </Stack>
-    <Stack w="full" align="center">
-      <HStack py={16} w="full" maxW="6xl" justify="space-between">
-        <Stack spacing={4}>
+    <Stack px="5%" w="full" align="center">
+      <Stack
+        direction={['column', 'column', 'row']}
+        py={[8, 16]}
+        w="full"
+        spacing={[12, 12, 2]}
+        maxW="6xl"
+        justify="space-between"
+      >
+        <Stack spacing={[4, 0, 4]}>
           <Logo w={32} />
           <HStack spacing={12}>
-            <HStack spacing={12} pt={2}>
+            <Stack direction={['column', 'row']} spacing={[6, 12]} pt={2}>
               <Link href="/about-us">
                 <ChakraLink fontWeight="600" color="teal.400">
                   About Us
                 </ChakraLink>
               </Link>
 
-              <Link href="/how-it-works">
+              <Link href="#how-it-works">
                 <ChakraLink fontWeight="600" color="teal.400">
                   How it works
                 </ChakraLink>
@@ -89,7 +100,7 @@ export const Footer = ({ ...rest }) => (
                   FAQs
                 </ChakraLink>
               </Link>
-            </HStack>
+            </Stack>
           </HStack>
         </Stack>
         <Stack spacing={4}>
@@ -113,14 +124,22 @@ export const Footer = ({ ...rest }) => (
             </Button>
           </HStack>
         </Stack>
-      </HStack>
+      </Stack>
     </Stack>
 
-    <Stack borderTop="1px solid" borderColor="gray.200" w="full" align="center">
-      <HStack
+    <Stack
+      px="5%"
+      borderTop="1px solid"
+      borderColor="gray.200"
+      w="full"
+      align="center"
+    >
+      <Stack
         py={8}
         w="full"
+        direction={['column', 'row']}
         maxW="6xl"
+        spacing={[4, 2]}
         justify="space-between"
         align="flex-start"
       >
@@ -159,7 +178,7 @@ export const Footer = ({ ...rest }) => (
             />
           </ChakraLink>
         </HStack>
-      </HStack>
+      </Stack>
     </Stack>
   </Box>
 )

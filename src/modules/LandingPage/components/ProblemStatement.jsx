@@ -11,23 +11,46 @@ import React from 'react'
 
 export default function ProblemStatement({ ...rest }) {
   return (
-    <Stack pt={44} w="full" {...rest}>
+    <Stack pt={[12, 12, 20, 44]} w="full" {...rest}>
       <HStack
         w="full"
         px="5%"
-        h="xl"
+        h={['full', 'full', 'full', '2xl', 'xl']}
         align="flex-start"
         justify="center"
         bg="teal.700"
         py={12}
       >
-        <HStack spacing={12} w="full" maxW="6xl" justify="space-between">
-          <Stack pos="relative" w="55%">
-            <Image mt="-12.6rem" w="40rem" src="/images/frowning-lady.png" />
+        <Stack
+          direction={['column', 'column', 'column', 'row']}
+          spacing={[4, 4, 4, 12]}
+          w="full"
+          maxW="6xl"
+          align="center"
+          justify="space-between"
+        >
+          <Stack
+            overflow={['initial', 'initial', 'initial', 'hidden', 'initial']}
+            h={['full', 'full', '39rem', '39rem', 'initial']}
+            align="center"
+            w={['20rem', '20rem', '30rem', '55%']}
+          >
+            <Image
+              mt={['0', '0', '0', '2.4rem', '-12.6rem']}
+              w="40rem"
+              h={['initial', 'initial', 'initial', 'full', 'initial']}
+              src="/images/frowning-lady.png"
+            />
           </Stack>
 
-          <Stack textAlign="left" spacing={6} color="white" w="45%" py={8}>
-            <Heading>
+          <Stack
+            textAlign={['justify', 'justify', 'justify', 'left']}
+            spacing={6}
+            color="white"
+            w={['full', 'full', 'full', '45%']}
+            py={[4, 4, 0, 8]}
+          >
+            <Heading textAlign={['center', 'center', 'center', 'left']}>
               These kind of statements <br /> should no longer exist in 2021
             </Heading>
             <Text>
@@ -44,10 +67,15 @@ export default function ProblemStatement({ ...rest }) {
               unreliable clients or service providers.
             </Text>
             <Link href="about-us">
-              <ChakraLink color="orange.300">Read more about us</ChakraLink>
+              <ChakraLink
+                color="orange.300"
+                textAlign={['center', 'center', 'center', 'left']}
+              >
+                Read more about us
+              </ChakraLink>
             </Link>
           </Stack>
-        </HStack>
+        </Stack>
       </HStack>
     </Stack>
   )

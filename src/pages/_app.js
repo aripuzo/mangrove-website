@@ -39,7 +39,6 @@ function MyApp({ Component, pageProps }) {
         *:focus {
           box-shadow: none !important;
         }
-
         body {
           scroll-behavior: smooth;
         }

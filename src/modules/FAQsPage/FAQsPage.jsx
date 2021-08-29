@@ -37,9 +37,9 @@ const questions = [
 
 export default function FAQsPage() {
   return (
-    <Stack color="gray.600" pt={40} px="5%">
-      <VStack spacing={24}>
-        <Heading>Frequently Asked Questions</Heading>
+    <Stack color="gray.600" pt={[32, 32, 40]} px="5%">
+      <VStack spacing={[12, 12, 24]}>
+        <Heading textAlign="center">Frequently Asked Questions</Heading>
         <Flex justify="center" mt={10}>
           <Box w={['sm', 'xl', '3xl', '4xl']}>
             <Accordion defaultIndex={[]} allowMultiple>
@@ -88,8 +88,8 @@ export default function FAQsPage() {
           </Box>
         </Flex>
       </VStack>
-      <TrustedCompanies pt={40} />
-      <Stack pt={16}></Stack>
+      <TrustedCompanies pt={[20, 20, 40]} />
+      <Stack pt={[0, 0, 16]}></Stack>
     </Stack>
   )
 }
