@@ -15,7 +15,7 @@ import { RiUserAddLine } from 'react-icons/ri'
 export default function Intro({ ...rest }) {
   return (
     <Box
-      h="130vh"
+      h={['120vh', '130vh']}
       bgSize="cover"
       bgRepeat="no-repeat"
       bgImage="url(/illustrations/hero-gradient.png)"
@@ -25,8 +25,12 @@ export default function Intro({ ...rest }) {
       {...rest}
     >
       <VStack spacing={6}>
-        <VStack>
-          <Heading textAlign="center" fontSize="4rem" color="dullTeal.200">
+        <VStack px="5%">
+          <Heading
+            textAlign="center"
+            fontSize={['3rem', '3rem', '4rem']}
+            color="dullTeal.200"
+          >
             Get&nbsp;
             <Box as="span" color="teal.700">
               money&nbsp;

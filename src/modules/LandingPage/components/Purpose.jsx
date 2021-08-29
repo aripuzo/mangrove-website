@@ -4,8 +4,8 @@ import React from 'react'
 export default function Purpose({ ...rest }) {
   return (
     <Stack
-      pt={44}
-      pb={36}
+      pt={[32, 24, 24, 44]}
+      pb={[12, 20, 20, 36]}
       bg="blue.50"
       align="center"
       px="5%"
@@ -16,7 +16,11 @@ export default function Purpose({ ...rest }) {
       {...rest}
     >
       <Stack w="full" maxW="5xl" justify="space-between">
-        <Heading textAlign="left" color="dullTeal.200" fontSize="5xl">
+        <Heading
+          textAlign="left"
+          color="dullTeal.200"
+          fontSize={['3xl', '3xl', '3xl', '5xl']}
+        >
           Just like the mangrove tree, we act as a buffer between you and
           uncertainty.&nbsp;
           <Box as="span" color="teal.700">
