@@ -1,13 +1,13 @@
-import { Image } from "@chakra-ui/image";
-import Router from "next/router";
+import { Image } from '@chakra-ui/image'
+import Router from 'next/router'
 
-export const Logo = ({ ...rest }) => {
+export const Logo = ({ white, notLinked, ...rest }) => {
   return (
     <Image
       cursor="pointer"
-      onClick={() => Router.push(`/`)}
-      src="/logo.png"
+      onClick={() => !notLinked && Router.push(`/`)}
+      src={white ? '/icons/logo-white.png' : '/logo.png'}
       {...rest}
     />
-  );
-};
+  )
+}
