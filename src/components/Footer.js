@@ -95,7 +95,7 @@ export const Footer = ({ ...rest }) => (
                   Pricing
                 </ChakraLink>
               </Link>
-              <Link href="/pricing">
+              <Link href="/faqs">
                 <ChakraLink fontWeight="600" color="teal.400">
                   FAQs
                 </ChakraLink>
@@ -119,7 +119,13 @@ export const Footer = ({ ...rest }) => (
               fontSize="md"
               size="lg"
             />
-            <Button colorScheme="teal" w={32} h={12} roundedLeft="none">
+            <Button
+              type="submit"
+              colorScheme="teal"
+              w={32}
+              h={12}
+              roundedLeft="none"
+            >
               Subscribe
             </Button>
           </HStack>

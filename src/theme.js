@@ -1,34 +1,35 @@
-import { extendTheme } from '@chakra-ui/react'
-import { createBreakpoints } from '@chakra-ui/theme-tools'
+import { extendTheme } from "@chakra-ui/react";
+import { createBreakpoints } from "@chakra-ui/theme-tools";
 
 const fonts = {
-  body: 'Proxima Nova, sans-serif',
-  heading: 'Platform Regular, sans-serif',
-  mono: 'Proxima Nova, sans-serif',
-}
+  body: "Proxima Nova, sans-serif",
+  heading: "Platform Regular, sans-serif",
+  mono: "Proxima Nova, sans-serif",
+};
 
 const breakpoints = createBreakpoints({
-  sm: '576px',
-  md: '768px',
-  lg: '992px',
-  xl: '1200px',
-  '2xl': '1366px',
-})
+  sm: "576px",
+  md: "768px",
+  lg: "992px",
+  xl: "1200px",
+  "2xl": "1366px",
+});
 
 const theme = extendTheme({
   colors: {
-    black: '#16161D',
+    black: "#16161D",
+    lightTeal: "#F0F8F8",
     dullTeal: {
-      50: '#e5f8f8',
-      100: '#cde3e3',
-      200: '#b0cece',
-      300: '#93baba',
-      400: '#76a6a6',
-      500: '#5c8c8c',
-      600: '#476e6e',
-      700: '#314f4f',
-      800: '#193030',
-      900: '#001212',
+      50: "#e5f8f8",
+      100: "#cde3e3",
+      200: "#b0cece",
+      300: "#93baba",
+      400: "#76a6a6",
+      500: "#5c8c8c",
+      600: "#476e6e",
+      700: "#314f4f",
+      800: "#193030",
+      900: "#001212",
     },
   },
   fonts,
@@ -50,9 +51,9 @@ const theme = extendTheme({
           />
         </svg>
       ),
-      viewBox: '0 0 3000 3163',
+      viewBox: "0 0 3000 3163",
     },
   },
-})
+});
 
-export default theme
+export default theme;
