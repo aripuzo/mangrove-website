@@ -6,10 +6,13 @@ import {
   HStack,
   Input,
   Text,
+  Link as ChakraLink,
   VStack,
-} from '@chakra-ui/react'
-import React from 'react'
-import { Logo } from '../../components/Logo'
+} from "@chakra-ui/react";
+import React from "react";
+import { Logo } from "../../components/Logo";
+import Link from "next/link";
+import TextSwitch from "../../components/TextSwitch";
 
 export default function JoinWaitListPage() {
   return (
@@ -26,21 +29,11 @@ export default function JoinWaitListPage() {
       <VStack w="full" spacing={6}>
         <VStack w="full">
           <Logo notLinked w={36} pb={3} />
-          <Heading
-            textAlign="center"
+          <TextSwitch
             fontWeight="extrabold"
-            fontSize={['2.5rem', '3rem', '4rem']}
-            color="dullTeal.200"
-          >
-            Get&nbsp;
-            <Box as="span" color="teal.700">
-              money&nbsp;
-            </Box>
-            for your&nbsp;
-            <Box as="span" color="teal.700">
-              value&nbsp;
-            </Box>
-          </Heading>
+            fontSize={["2.5rem", "3rem", "4rem"]}
+          />
+
           <Text color="gray.600" maxW="2xl" fontSize="lg" textAlign="center">
             A happy transaction is one that ensures the client pays and knows
             they shall receive the desired service, and the service provider
@@ -50,7 +43,7 @@ export default function JoinWaitListPage() {
         <HStack as="form" pt={6} spacing={0}>
           <Input
             roundedRight="none"
-            w={['full', 72]}
+            w={["full", 72]}
             placeholder="Your Email"
             isRequired
             bg="white"
@@ -69,7 +62,10 @@ export default function JoinWaitListPage() {
             Subscribe
           </Button>
         </HStack>
+        <Link href="faqs">
+          <ChakraLink color="teal.500">Frequently Asked Questions</ChakraLink>
+        </Link>
       </VStack>
     </Center>
-  )
+  );
 }

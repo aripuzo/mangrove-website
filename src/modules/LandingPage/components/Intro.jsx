@@ -12,6 +12,7 @@ import Router from "next/router";
 import React from "react";
 import { RiUserAddLine } from "react-icons/ri";
 import FadeIn from "react-fade-in";
+import TextSwitch from "../../../components/TextSwitch";
 
 export default function Intro({ ...rest }) {
   return (
@@ -28,20 +29,7 @@ export default function Intro({ ...rest }) {
       <VStack spacing={6}>
         <FadeIn delay={400} transitionDuration={1500}>
           <VStack px="5%">
-            <Heading
-              textAlign="center"
-              fontSize={["3rem", "3rem", "4rem"]}
-              color="dullTeal.200"
-            >
-              Get&nbsp;
-              <Box as="span" color="teal.700">
-                money&nbsp;
-              </Box>
-              for your&nbsp;
-              <Box as="span" color="teal.700">
-                value&nbsp;
-              </Box>
-            </Heading>
+            <TextSwitch />
             <Text color="gray.600" maxW="2xl" fontSize="lg" textAlign="center">
               A happy transaction is one that ensures the client pays and knows
               they shall receive the desired service, and the service provider
@@ -70,7 +58,7 @@ export default function Intro({ ...rest }) {
             </Button>
           </HStack>
 
-          <Image pt={4} src="/illustrations/dashboard-preview.png" />
+          <Image pt={4} src="/images/dashboard-preview.svg" />
         </FadeIn>
       </VStack>
     </Box>
