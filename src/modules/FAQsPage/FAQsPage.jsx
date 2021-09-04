@@ -12,31 +12,48 @@ import {
   Stack,
   Text,
   VStack,
+  useToast,
 } from "@chakra-ui/react";
-import React from "react";
+import Axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Logo } from "../../components/Logo";
+import { BASE_API_URL } from "../../utils/constants";
 import TrustedCompanies from "../LandingPage/components/TrustedCompanies";
-
-const questions = [
-  {
-    question: "How can i signup?",
-    answer:
-      "Currently we have Igbo, Yoruba, Pidgin and English. We hope to scale very soon to accommodate other Nigerian and African languages.",
-  },
-
-  {
-    question: "Do i need to pay any fee?",
-    answer:
-      "Once you request for an iRant session, we search for available buddies and then prepare a conversation between the two of you",
-  },
-  {
-    question: "Can it work for any industry?",
-    answer:
-      "Of course it can. We have the best qualified and certified psychological experts and would like you to be sure of that. Just click on our rant buddies and you have access to their profiles",
-  },
-];
+import { PropagateLoader } from "react-spinners";
+import theme from "../../theme";
 
 export default function FAQsPage() {
+  const [faqs, setFaqs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const toast = useToast();
+
+  useEffect(() => {
+    fetchFAQs();
+  }, []);
+
+  const fetchFAQs = () => {
+    setIsLoading(true);
+    Axios.get(BASE_API_URL + "/faqs")
+      .then(({ data }) => {
+        console.log(data.data);
+        setIsLoading(false);
+
+        setFaqs(data.data);
+      })
+      .catch(({ response }) => {
+        toast({
+          title: "Something went wrong",
+          description: response.data.message,
+          status: "error",
+          position: "top",
+          duration: 4000,
+          isClosable: true,
+        });
+        setIsLoading(false);
+        console.log(response);
+      });
+  };
+
   return (
     <Stack
       color="gray.600"
@@ -49,11 +66,12 @@ export default function FAQsPage() {
           <Logo notLinked />
           <Heading textAlign="center">Frequently Asked Questions</Heading>
         </VStack>
-        <Flex justify="center" mt={10}>
+        <VStack justify="center" mt={10}>
+          {isLoading && <PropagateLoader color={theme.colors.teal[500]} />}
           <Box w={["sm", "xl", "3xl", "4xl"]}>
             <Accordion defaultIndex={[]} allowMultiple>
-              {questions.map(({ question, answer }, index) => (
-                <AccordionItem key={index}>
+              {faqs.map(({ question, answer, id }) => (
+                <AccordionItem key={id}>
                   {({ isExpanded }) => (
                     <>
                       <AccordionButton px={6} py={6}>
@@ -95,7 +113,7 @@ export default function FAQsPage() {
               ))}
             </Accordion>
           </Box>
-        </Flex>
+        </VStack>
       </VStack>
       {/* <TrustedCompanies pt={[20, 20, 40]} /> */}
       <Stack pt={[0, 0, 16]}></Stack>

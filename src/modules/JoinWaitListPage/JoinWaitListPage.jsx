@@ -1,20 +1,59 @@
 import {
-  Box,
   Button,
   Center,
-  Heading,
   HStack,
   Input,
-  Text,
   Link as ChakraLink,
+  Text,
+  useToast,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
-import { Logo } from "../../components/Logo";
+import Axios from "axios";
 import Link from "next/link";
+import React, { useState } from "react";
+import { Logo } from "../../components/Logo";
 import TextSwitch from "../../components/TextSwitch";
+import { BASE_API_URL } from "../../utils/constants";
 
 export default function JoinWaitListPage() {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const toast = useToast();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    setIsLoading(true);
+    Axios.post(BASE_API_URL + "/waitlist", {
+      email,
+    })
+      .then(({ data }) => {
+        console.log(data);
+        setIsLoading(false);
+        toast({
+          title:
+            "Congratulations! You will be given early access once we launch",
+          status: "success",
+          position: "top",
+          duration: null,
+          isClosable: true,
+        });
+        setEmail("");
+      })
+      .catch(({ response }) => {
+        toast({
+          title: "Something went wrong",
+          description: response.data.message,
+          status: "error",
+          position: "top",
+          duration: 4000,
+          isClosable: true,
+        });
+        setIsLoading(false);
+        console.log(response);
+      });
+  };
+
   return (
     <Center
       minH="100vh"
@@ -40,7 +79,7 @@ export default function JoinWaitListPage() {
             works knowing that payment is assured.
           </Text>
         </VStack>
-        <HStack as="form" pt={6} spacing={0}>
+        <HStack as="form" onSubmit={handleSubmit} pt={6} spacing={0}>
           <Input
             roundedRight="none"
             w={["full", 72]}
@@ -49,17 +88,22 @@ export default function JoinWaitListPage() {
             bg="white"
             name="email"
             variant="filled"
+            // type="email"
             fontSize="md"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
             size="lg"
           />
           <Button
+            isLoading={isLoading}
+            loadingText="Saving..."
             type="submit"
             colorScheme="teal"
-            w={32}
+            w={[56, 40]}
             h={12}
             roundedLeft="none"
           >
-            Join
+            Get Early Access
           </Button>
         </HStack>
         <Link href="faqs">

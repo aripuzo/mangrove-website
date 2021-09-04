@@ -13,3 +13,7 @@
   font-weight: 500;
   font-display: swap;
 }
+
+body {
+  scroll-behavior: smooth !important;
+}
