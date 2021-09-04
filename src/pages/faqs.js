@@ -1,10 +1,5 @@
-import PageLayout from '../components/Layout'
-import FAQsPage from '../modules/FAQsPage/FAQsPage'
+import FAQsPage from "../modules/FAQsPage/FAQsPage";
 
-const FAQs = () => (
-  <PageLayout>
-    <FAQsPage />
-  </PageLayout>
-)
+const FAQs = () => <FAQsPage />;
 
-export default FAQs
+export default FAQs;

@@ -59,11 +59,13 @@ export default function JoinWaitListPage() {
             h={12}
             roundedLeft="none"
           >
-            Subscribe
+            Join
           </Button>
         </HStack>
         <Link href="faqs">
-          <ChakraLink color="teal.500">Frequently Asked Questions</ChakraLink>
+          <ChakraLink textAlign="center" color="teal.500">
+            Frequently Asked Questions
+          </ChakraLink>
         </Link>
       </VStack>
     </Center>

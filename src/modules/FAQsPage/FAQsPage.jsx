@@ -1,4 +1,4 @@
-import { AddIcon, MinusIcon } from '@chakra-ui/icons'
+import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 import {
   Accordion,
   AccordionButton,
@@ -12,42 +12,51 @@ import {
   Stack,
   Text,
   VStack,
-} from '@chakra-ui/react'
-import React from 'react'
-import TrustedCompanies from '../LandingPage/components/TrustedCompanies'
+} from "@chakra-ui/react";
+import React from "react";
+import { Logo } from "../../components/Logo";
+import TrustedCompanies from "../LandingPage/components/TrustedCompanies";
 
 const questions = [
   {
-    question: 'How can i signup?',
+    question: "How can i signup?",
     answer:
-      'Currently we have Igbo, Yoruba, Pidgin and English. We hope to scale very soon to accommodate other Nigerian and African languages.',
+      "Currently we have Igbo, Yoruba, Pidgin and English. We hope to scale very soon to accommodate other Nigerian and African languages.",
   },
 
   {
-    question: 'Do i need to pay any fee?',
+    question: "Do i need to pay any fee?",
     answer:
-      'Once you request for an iRant session, we search for available buddies and then prepare a conversation between the two of you',
+      "Once you request for an iRant session, we search for available buddies and then prepare a conversation between the two of you",
   },
   {
-    question: 'Can it work for any industry?',
+    question: "Can it work for any industry?",
     answer:
-      'Of course it can. We have the best qualified and certified psychological experts and would like you to be sure of that. Just click on our rant buddies and you have access to their profiles',
+      "Of course it can. We have the best qualified and certified psychological experts and would like you to be sure of that. Just click on our rant buddies and you have access to their profiles",
   },
-]
+];
 
 export default function FAQsPage() {
   return (
-    <Stack color="gray.600" pt={[32, 32, 40]} px="5%">
+    <Stack
+      color="gray.600"
+      // pt={[32, 32, 40]}
+      pt={[20, 20, 20]}
+      px="5%"
+    >
       <VStack spacing={[12, 12, 24]}>
-        <Heading textAlign="center">Frequently Asked Questions</Heading>
+        <VStack>
+          <Logo notLinked />
+          <Heading textAlign="center">Frequently Asked Questions</Heading>
+        </VStack>
         <Flex justify="center" mt={10}>
-          <Box w={['sm', 'xl', '3xl', '4xl']}>
+          <Box w={["sm", "xl", "3xl", "4xl"]}>
             <Accordion defaultIndex={[]} allowMultiple>
               {questions.map(({ question, answer }, index) => (
                 <AccordionItem key={index}>
                   {({ isExpanded }) => (
                     <>
-                      <AccordionButton py={6}>
+                      <AccordionButton px={6} py={6}>
                         <HStack
                           justify="space-between"
                           w="full"
@@ -56,7 +65,7 @@ export default function FAQsPage() {
                           <Text
                             fontWeight="bold"
                             textAlign="left"
-                            fontSize={['md', 'xl']}
+                            fontSize={["md", "xl"]}
                           >
                             {question}
                           </Text>
@@ -75,7 +84,7 @@ export default function FAQsPage() {
                           align="center"
                           spacing={6}
                         >
-                          <Text fontSize={['md', 'md']} ml={6}>
+                          <Text fontSize={["md", "md"]} ml={6}>
                             {answer}
                           </Text>
                         </Stack>
@@ -88,8 +97,8 @@ export default function FAQsPage() {
           </Box>
         </Flex>
       </VStack>
-      <TrustedCompanies pt={[20, 20, 40]} />
+      {/* <TrustedCompanies pt={[20, 20, 40]} /> */}
       <Stack pt={[0, 0, 16]}></Stack>
     </Stack>
-  )
+  );
 }

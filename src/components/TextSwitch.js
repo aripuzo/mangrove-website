@@ -40,6 +40,7 @@ export default function TextSwitch({ ...rest }) {
       textAlign="center"
       fontSize={["3rem", "3rem", "4rem"]}
       color="dullTeal.200"
+      {...rest}
     >
       Get&nbsp;
       <Box as="span" color="teal.700">
