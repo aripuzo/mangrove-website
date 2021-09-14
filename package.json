@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "cross-env NEXT_EXPORT=true next build && cross-env NEXT_EXPORT=true next export",
+    "deploy": "yarn build && yarn export"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.0",
@@ -20,5 +22,8 @@
     "react-icons": "^4.2.0",
     "react-moment": "^1.1.1",
     "react-spinners": "^0.11.0"
+  },
+  "devDependencies": {
+    "cross-env": "6.0.3"
   }
 }

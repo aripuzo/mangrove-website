@@ -14,6 +14,7 @@ import React, { useState } from "react";
 import { Logo } from "../../components/Logo";
 import TextSwitch from "../../components/TextSwitch";
 import { BASE_API_URL } from "../../utils/constants";
+import FAQsPage from "../FAQsPage/FAQsPage";
 
 export default function JoinWaitListPage() {
   const [email, setEmail] = useState("");
@@ -106,11 +107,10 @@ export default function JoinWaitListPage() {
             Get Early Access
           </Button>
         </HStack>
-        <Link href="faqs">
-          <ChakraLink textAlign="center" color="teal.500">
-            Frequently Asked Questions
-          </ChakraLink>
-        </Link>
+        {/* <ChakraLink textAlign="center" color="teal.500">
+          Frequently Asked Questions
+        </ChakraLink> */}
+        <FAQsPage />
       </VStack>
     </Center>
   );

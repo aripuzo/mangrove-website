@@ -58,13 +58,16 @@ export default function FAQsPage() {
     <Stack
       color="gray.600"
       // pt={[32, 32, 40]}
-      pt={[20, 20, 20]}
-      px="5%"
+      pb={32}
+      pt={[10, 10, 10]}
+      // px="5%"
     >
-      <VStack spacing={[12, 12, 24]}>
+      <VStack spacing={[8, 8, 8]}>
         <VStack>
-          <Logo notLinked />
-          <Heading textAlign="center">Frequently Asked Questions</Heading>
+          {/* <Logo notLinked /> */}
+          <Heading fontSize="2xl" textAlign="center">
+            Frequently Asked Questions
+          </Heading>
         </VStack>
         <VStack justify="center" mt={10}>
           {isLoading && <PropagateLoader color={theme.colors.teal[500]} />}
