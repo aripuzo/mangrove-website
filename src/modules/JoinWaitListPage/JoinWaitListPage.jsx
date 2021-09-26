@@ -75,9 +75,10 @@ export default function JoinWaitListPage() {
           />
 
           <Text color="gray.600" maxW="2xl" fontSize="lg" textAlign="center">
-            A happy transaction is one that ensures the client pays and knows
-            they shall receive the desired service, and the service provider
-            works knowing that payment is assured.
+            Mangrove ensures Clients and Contractors can easily create, sign and
+            manage business contracts. With Mangrove, Contractors can be sure
+            the client has money to pay before work starts and Clients can
+            guarantee money is only paid to contractor’s when work is completed.
           </Text>
         </VStack>
         <HStack as="form" onSubmit={handleSubmit} pt={6} spacing={0}>

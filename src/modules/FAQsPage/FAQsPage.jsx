@@ -99,13 +99,8 @@ export default function FAQsPage() {
                         </HStack>
                       </AccordionButton>
                       <AccordionPanel pl={[6, 6]} pt={4} pb={8}>
-                        <Stack
-                          isInline
-                          pos="relative"
-                          align="center"
-                          spacing={6}
-                        >
-                          <Text fontSize={["md", "md"]} ml={6}>
+                        <Stack spacing={6}>
+                          <Text textAlign="left" fontSize={["md", "md"]} ml={6}>
                             {answer}
                           </Text>
                         </Stack>
