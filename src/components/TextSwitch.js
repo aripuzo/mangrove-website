@@ -19,7 +19,7 @@ export default function TextSwitch({ ...rest }) {
     };
   }, [showMoneyFirst]);
 
-  return showMoneyFirst ? (
+  return (
     <Heading
       textAlign="center"
       fontSize={["3rem", "3rem", "4rem"]}
@@ -28,27 +28,11 @@ export default function TextSwitch({ ...rest }) {
     >
       Get&nbsp;
       <Box as="span" color="teal.700">
-        value&nbsp;
+        {showMoneyFirst ? 'value' : 'money'}&nbsp;
       </Box>
       for your&nbsp;
       <Box as="span" color="teal.700">
-        money&nbsp;
-      </Box>
-    </Heading>
-  ) : (
-    <Heading
-      textAlign="center"
-      fontSize={["3rem", "3rem", "4rem"]}
-      color="dullTeal.200"
-      {...rest}
-    >
-      Get&nbsp;
-      <Box as="span" color="teal.700">
-        money&nbsp;
-      </Box>
-      for your&nbsp;
-      <Box as="span" color="teal.700">
-        value&nbsp;
+        {showMoneyFirst ? 'money' : 'value'}&nbsp;
       </Box>
     </Heading>
   );

@@ -75,10 +75,9 @@ export default function JoinWaitListPage() {
           />
 
           <Text color="gray.600" maxW="2xl" fontSize="lg" textAlign="center">
-            Mangrove ensures Clients and Contractors can easily create, sign and
-            manage business contracts. With Mangrove, Contractors can be sure
-            the client has money to pay before work starts and Clients can
-            guarantee money is only paid to contractor’s when work is completed.
+            Mangrove ensures clients and contractors can easily create automated
+            business contracts. Mangrove guarantees that payment date is never
+            missed and is only made when work is completed.
           </Text>
         </VStack>
         <HStack as="form" onSubmit={handleSubmit} pt={6} spacing={0}>
@@ -105,7 +104,7 @@ export default function JoinWaitListPage() {
             h={12}
             roundedLeft="none"
           >
-            Get Early Access
+            Join Our Waitlist
           </Button>
         </HStack>
         {/* <ChakraLink textAlign="center" color="teal.500">

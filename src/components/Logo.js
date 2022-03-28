@@ -1,13 +1,24 @@
-import { Image } from "@chakra-ui/image";
+import { Image, Link as ChakraLink } from "@chakra-ui/react";
+import Link from 'next/link';
 import Router from "next/router";
 
-export const Logo = ({ white, notLinked, ...rest }) => {
+const LogoImage = ({ white, ...rest }) => {
   return (
     <Image
-      cursor="pointer"
-      onClick={() => !notLinked && Router.push(`/`)}
       src={white ? "/icons/logo-white.svg" : "/logo.svg"}
       {...rest}
     />
+  );
+}
+
+export const Logo = ({ white, notLinked, ...rest }) => {
+  if (notLinked) return <LogoImage {...{ ...rest, white }} />;
+
+  return (
+    <Link href="/" passHref={true}>
+      <ChakraLink>
+        <LogoImage {...{ ...rest, white }} />
+      </ChakraLink>
+    </Link>
   );
 };

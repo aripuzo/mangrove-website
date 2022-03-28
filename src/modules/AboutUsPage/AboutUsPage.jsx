@@ -41,15 +41,16 @@ export default function AboutUsPage() {
             fontSize={["1.5rem", "2rem", "2rem"]}
             color="dullTeal.200"
           >
-            Ari and Joseph formed a team to create a solution to this problem,
-            and that is how Mangrove was formed. The idea was to design a
-            solution that allows our clients to focus on what really matters to
-            them, while we do the legwork of handling payments.
+            Joe and Ari formed a team to solve contracting and payment problems
+            businesses and individuals experience. The idea was to design a
+            product that allows clients and contractors focus on what really
+            matters to them, while we do the legwork of handling contracts and
+            payments.
           </Heading>
         </VStack>
       </Stack>
       <Stack pos="relative">
-        <Stack pos="absolute" w="full" align="center" px="5%" top={36} h="85%">
+        {/* <Stack pos="absolute" w="full" align="center" px="5%" top={36} h="85%">
           <Heading
             w="full"
             maxW="6xl"
@@ -60,12 +61,17 @@ export default function AboutUsPage() {
           >
             Our Mission
           </Heading>
-        </Stack>
+        </Stack> */}
         <Stack>
           <Stack align="center" pt={[16, 16, 36]} pb={[12, 12, 28]} px="5%">
             <Stack justify="space-between" maxW="6xl" w="full" direction="row">
               <Stack>
-                <Heading pos="sticky" top={32} d={["none"]} color="teal.500">
+                <Heading
+                  pos="sticky"
+                  top={32}
+                  d={["none", "none", "none", "block"]}
+                  color="teal.500"
+                >
                   Our Mission
                 </Heading>
               </Stack>
@@ -81,18 +87,9 @@ export default function AboutUsPage() {
                   Is to...
                 </Heading>
                 <Text color="gray.600" pt={[4, 8]} fontSize="lg">
-                  Our journey started based on personal experience. Ari had
-                  worked as a freelancer for many clients and had issues with a
-                  few not paying the full agreed amount or none at all, after
-                  work had been done and delivered. Joseph on the other hand had
-                  been a client and faced challenges with the freelancer not
-                  delivering on the agreed task but expecting full payment
-                  because of the time spent.
-                  <br />
-                  <br />
-                  The bone of contention in all these issues is money, and a lot
-                  of time (and money too!) can be wasted following up with
-                  either unreliable clients or service providers.
+                  To create digital tools to ensure individuals and
+                  organizations always get value for money and get money for
+                  value.
                 </Text>
               </Stack>
             </Stack>
@@ -107,7 +104,12 @@ export default function AboutUsPage() {
           >
             <Stack justify="space-between" maxW="6xl" w="full" direction="row">
               <Stack>
-                <Heading pos="sticky" top={32} d={["none"]} color="teal.600">
+                <Heading
+                  pos="sticky"
+                  top={32}
+                  d={["none", "none", "none", "block"]}
+                  color="teal.500"
+                >
                   Our Vision
                 </Heading>
               </Stack>
@@ -123,18 +125,8 @@ export default function AboutUsPage() {
                   Is to...
                 </Heading>
                 <Text color="gray.600" pt={[4, 8]} fontSize="lg">
-                  Our journey started based on personal experience. Ari had
-                  worked as a freelancer for many clients and had issues with a
-                  few not paying the full agreed amount or none at all, after
-                  work had been done and delivered. Joseph on the other hand had
-                  been a client and faced challenges with the freelancer not
-                  delivering on the agreed task but expecting full payment
-                  because of the time spent.
-                  <br />
-                  <br />
-                  The bone of contention in all these issues is money, and a lot
-                  of time (and money too!) can be wasted following up with
-                  either unreliable clients or service providers.
+                  Restoring confidence and satisfaction in every transaction
+                  between business parties in Africa.
                 </Text>
               </Stack>
             </Stack>
@@ -143,8 +135,13 @@ export default function AboutUsPage() {
           <Stack align="center" pt={[16, 16, 36]} pb={[12, 12, 28]} px="5%">
             <Stack justify="space-between" maxW="6xl" w="full" direction="row">
               <Stack>
-                <Heading pos="sticky" top={32} d={["none"]} color="teal.500">
-                  Our Goal
+                <Heading
+                  pos="sticky"
+                  top={32}
+                  d={["none", "none", "none", "block"]}
+                  color="teal.500"
+                >
+                  Core Values
                 </Heading>
               </Stack>
 
@@ -153,24 +150,17 @@ export default function AboutUsPage() {
                   d={["block", "block", "block", "none"]}
                   color="teal.500"
                 >
-                  Our Goal is to...
+                  Core Values
                 </Heading>
-                <Heading d={["none", "none", "none", "block"]} color="teal.500">
+                {/* <Heading d={["none", "none", "none", "block"]} color="teal.500">
                   Is to...
-                </Heading>
-                <Text color="gray.600" pt={[4, 8]} fontSize="lg">
-                  Our journey started based on personal experience. Ari had
-                  worked as a freelancer for many clients and had issues with a
-                  few not paying the full agreed amount or none at all, after
-                  work had been done and delivered. Joseph on the other hand had
-                  been a client and faced challenges with the freelancer not
-                  delivering on the agreed task but expecting full payment
-                  because of the time spent.
+                </Heading> */}
+                <Text color="gray.600" pt={[4, 0]} fontSize="lg">
+                  Trust, Transparency and Tenacity
                   <br />
                   <br />
-                  The bone of contention in all these issues is money, and a lot
-                  of time (and money too!) can be wasted following up with
-                  either unreliable clients or service providers.
+                  We offer digital solutions to ease business transactions
+                  between clients and contractors
                 </Text>
               </Stack>
             </Stack>
