@@ -4,6 +4,7 @@ import { LightModeSwitch } from "../components/LightModeSwitch";
 import Head from "next/head";
 import theme from "../theme";
 import { initGA, logPageView } from "../utils/googleAnalytics";
+import "aos/dist/aos.css";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

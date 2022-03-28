@@ -14,21 +14,21 @@ import { RiUserAddLine } from 'react-icons/ri'
 const howItWorks = [
   {
     icon: <Icon as={RiUserAddLine} fontSize="4xl" color="gray.600" />,
-    text: 'Create an account, either as a Client or as a Contractor',
+    text: "Create an account, either as a Client or as a Contractor",
   },
   {
     icon: (
       <Image src="/illustrations/contract.svg" boxSize={10} color="gray.600" />
     ),
-    text: 'Provide relevant details so that a contract can be generated for you.',
+    text: "Provide relevant details so that a contract can be generated for you.",
   },
   {
     icon: (
       <Image src="/illustrations/cocktail.svg" boxSize={10} color="gray.600" />
     ),
-    text: 'Make your favourite drink and relax!',
+    text: "Order  your favourite drink, relax  and track your  contract   progress.",
   },
-]
+];
 
 export default function HowItWorks({ ...rest }) {
   return (

@@ -66,29 +66,31 @@ export default function Navbar({ whiteNav, ...rest }) {
             color={pastTop ? "gray.600" : whiteNav ? "white" : "gray.600"}
             pt={2}
           >
-            <Link href="/about-us">
+            <Link href="/about-us" passHref={true}>
               <ChakraLink>About Us</ChakraLink>
             </Link>
 
-            <Link href="#how-it-works">
+            <Link href="#how-it-works" passHref={true}>
               <ChakraLink>How it works</ChakraLink>
             </Link>
-            <Link href="/pricing">
+            {/* <Link href="/pricing" passHref={true}>
               <ChakraLink>Pricing</ChakraLink>
-            </Link>
-            <Link href="/signin">
+            </Link> */}
+            <Link href="/signin" passHref={true}>
               <ChakraLink>Sign in</ChakraLink>
             </Link>
 
-            <Button
-              onClick={() => Router.push("/join-waitlist")}
-              colorScheme="teal"
-              w={36}
-              h={12}
-              rounded={4}
-            >
-              Get Started
-            </Button>
+            <Link href="/join-waitlist" passHref={true}>
+              <Button
+                as="a"
+                colorScheme="teal"
+                w={36}
+                h={12}
+                rounded={4}
+              >
+                Get Started
+              </Button>
+            </Link>
           </HStack>
 
           <HStack
@@ -115,7 +117,7 @@ export default function Navbar({ whiteNav, ...rest }) {
               <Logo w={36} />
               <VStack spacing={7}>
                 {mobileNavLinks.map(({ name, href }, index) => (
-                  <Link href={href} key={index}>
+                  <Link href={href} key={index} passHref={true}>
                     <ChakraLink fontSize="xl" fontWeight="600" color="gray.600">
                       {name}
                     </ChakraLink>
@@ -123,7 +125,7 @@ export default function Navbar({ whiteNav, ...rest }) {
                 ))}
               </VStack>
               <VStack spacing={3}>
-                <Link href="/signin">
+                <Link href="/signin" passHref={true}>
                   <ChakraLink fontSize="xl" fontWeight="600" color="gray.600">
                     Sign in
                   </ChakraLink>

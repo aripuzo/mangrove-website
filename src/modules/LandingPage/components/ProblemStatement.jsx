@@ -15,61 +15,73 @@ export default function ProblemStatement({ ...rest }) {
       <HStack
         w="full"
         px="5%"
-        h={['full', 'full', 'full', '2xl', 'xl']}
         align="flex-start"
         justify="center"
         bg="teal.700"
-        py={12}
       >
         <Stack
-          direction={['column', 'column', 'column', 'row']}
+          direction={["column", "column", "column", "row"]}
           spacing={[4, 4, 4, 12]}
           w="full"
           maxW="6xl"
-          align="center"
-          justify="space-between"
+          // align="center"
+          // justify="space-between"
         >
           <Stack
-            overflow={['initial', 'initial', 'initial', 'hidden', 'initial']}
-            h={['full', 'full', '39rem', '39rem', 'initial']}
+            overflow={["initial", "initial", "initial", "initial", "initial"]}
+            h={["full", "full", "39rem", "39rem", "initial"]}
             align="center"
-            w={['20rem', '20rem', '30rem', '55%']}
+            w={["20rem", "20rem", "30rem", "55%"]}
+            pos="relative"
+            data-aos="fade-up"
           >
             <Image
-              mt={['0', '0', '0', '2.4rem', '-12.6rem']}
-              w="40rem"
-              h={['initial', 'initial', 'initial', 'full', 'initial']}
+              bottom="0"
+              right="0"
+              maxH={{ base: "100%", md: "initial" }}
+              pos={{ md: "absolute" }}
+              width={{ md: "110%" }}
+              maxW={{ md: "initial" }}
               src="/images/frowning-lady.png"
             />
           </Stack>
 
           <Stack
-            textAlign={['justify', 'justify', 'justify', 'left']}
+            textAlign={["justify", "justify", "justify", "left"]}
             spacing={6}
             color="white"
-            w={['full', 'full', 'full', '45%']}
-            py={[4, 4, 0, 8]}
+            w={["full", "full", "full", "45%"]}
+            py={[4, 4, 0, 12]}
+            data-aos="fade-up"
+            data-aos-delay="500"
           >
-            <Heading textAlign={['center', 'center', 'center', 'left']}>
-              These kind of statements <br /> should no longer exist in 2021
+            <Heading textAlign={["center", "center", "center", "left"]}>
+              These kind of statements should no longer exist in this time and
+              age
             </Heading>
             <Text>
-              Our journey started based on personal experience. Ari had worked
-              as a freelancer for many clients and had issues with a few not
-              paying the full agreed amount or none at all, after work had been
-              done and delivered. Joseph on the other hand had been a client and
-              faced challenges with the freelancer not delivering on the agreed
-              task but expecting full payment because of the time spent.
+              Our journey started based on personal experiences.
               <br />
               <br />
-              The bone of contention in all these issues is money, and a lot of
-              time (and money too!) can be wasted following up with either
-              unreliable clients or service providers.
+              Ari had worked as a freelancer for many clients and had issues
+              with a few not paying the full agreed amount or none at all even
+              after work had been done and deliverables had been met.
+              <br />
+              <br />
+              Joseph on the other hand had been a client and faced challenges
+              with a couple of freelancers not delivering on the agreed task but
+              expecting full payment because of the time spent.
+              <br />
+              <br />
+              We understand that these are real time issues you might have
+              encountered. We are obsessed about creating innovative ways to
+              solve these issues and mitigate risks with either unreliable
+              clients or service providers.
             </Text>
             <Link href="about-us">
               <ChakraLink
                 color="orange.300"
-                textAlign={['center', 'center', 'center', 'left']}
+                textAlign={["center", "center", "center", "left"]}
               >
                 Read more about us
               </ChakraLink>
@@ -78,5 +90,5 @@ export default function ProblemStatement({ ...rest }) {
         </Stack>
       </HStack>
     </Stack>
-  )
+  );
 }

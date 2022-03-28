@@ -1,12 +1,10 @@
-import JoinWaitListPage from "../modules/JoinWaitListPage/JoinWaitListPage";
-import Head from "next/head";
+import PageLayout from "../components/Layout";
+import LandingPage from "../modules/LandingPage/LandingPage";
 
-const JoinWaitList = () => (
-  <>
-    <Head>
-      <title>Get Early Access | Mangrove</title>
-    </Head>
-    <JoinWaitListPage />
-  </>
+const Index = () => (
+  <PageLayout>
+    <LandingPage />
+  </PageLayout>
 );
-export default JoinWaitList;
+
+export default Index;

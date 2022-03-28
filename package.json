@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^1.4.2",
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
+    "aos": "^2.3.4",
     "axios": "^0.21.1",
     "check-types": "^11.1.2",
     "framer-motion": "^4.0.3",
