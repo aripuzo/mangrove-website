@@ -1,1 +1,1 @@
-export const BASE_API_URL = "https://usemangrove.herokuapp.com/api/v1";
+export const BASE_API_URL = process.env.REACT_BASE_API_URL
