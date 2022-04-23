@@ -17,7 +17,7 @@ import TextSwitch from "../../../components/TextSwitch";
 export default function Intro({ ...rest }) {
   return (
     <Box
-      miinH={["120vh", "130vh"]}
+      // miinH={["120vh", "130vh"]}
       bgSize="cover"
       bgRepeat="no-repeat"
       bgImage="url(/illustrations/hero-gradient.png)"

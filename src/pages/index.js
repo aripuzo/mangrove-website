@@ -1,11 +1,9 @@
 import JoinWaitListPage from "../modules/JoinWaitListPage/JoinWaitListPage";
-import Head from "next/head";
+import Meta from '../components/Meta';
 
 const JoinWaitList = () => (
   <>
-    <Head>
-      <title>Get Early Access | Mangrove</title>
-    </Head>
+    <Meta title="Get Early Access | Mangrove" />
     <JoinWaitListPage />
   </>
 );
