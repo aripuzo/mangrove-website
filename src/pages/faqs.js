@@ -1,11 +1,9 @@
 import FAQsPage from "../modules/FAQsPage/FAQsPage";
-import Head from "next/head";
+import Meta from '../components/Meta';
 
 const FAQs = () => (
   <>
-    <Head>
-      <title>FAQs | Mangrove</title>
-    </Head>
+    <Meta title="FAQs | Mangrove" />
     <FAQsPage />
   </>
 );

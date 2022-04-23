@@ -1,12 +1,10 @@
 import PageLayout from "../components/Layout";
 import AboutUsPage from "../modules/AboutUsPage/AboutUsPage";
-import Head from "next/head";
+import Meta from '../components/Meta';
 
 const AboutUs = () => (
   <>
-    <Head>
-      <title>About Us | Mangrove</title>
-    </Head>
+    <Meta title="About Us | Mangrove" />
     <PageLayout whiteNav>
       <AboutUsPage />
     </PageLayout>
