@@ -76,11 +76,11 @@ export default function Navbar({ whiteNav, ...rest }) {
             {/* <Link href="/pricing" passHref={true}>
               <ChakraLink>Pricing</ChakraLink>
             </Link> */}
-            <Link href="/signin" passHref={true}>
+            {/* <Link href="/signin" passHref={true}>
               <ChakraLink>Sign in</ChakraLink>
-            </Link>
+            </Link> */}
 
-            <Link href="/join-waitlist" passHref={true}>
+            <Link href="https://dashboard.usemangrove.com" passHref={true}>
               <Button
                 as="a"
                 colorScheme="teal"

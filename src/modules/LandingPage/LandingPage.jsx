@@ -19,7 +19,7 @@ export default function LandingPage() {
     <Box>
       <Intro />
 
-      <TrustedCompanies />
+      {/* <TrustedCompanies /> */}
 
       <ProblemStatement />
 
