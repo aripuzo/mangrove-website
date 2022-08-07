@@ -63,7 +63,7 @@ export default function ProblemStatement({ ...rest }) {
               Our journey started based on personal experiences.
               <br />
               <br />
-              Ari had worked as a freelancer for many clients and had issues
+              Pelumi had worked as a freelancer for many clients and had issues
               with a few not paying the full agreed amount or none at all even
               after work had been done and deliverables had been met.
               <br />

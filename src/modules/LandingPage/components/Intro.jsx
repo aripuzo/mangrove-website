@@ -38,7 +38,7 @@ export default function Intro({ ...rest }) {
           </VStack>
           <HStack justify="center" mt={8} spacing={4}>
             <Button
-              onClick={() => Router.push("/signup")}
+              onClick={() => Router.push("https://dashboard.usemangrove.com")}
               colorScheme="teal"
               w={36}
               h={12}
@@ -48,7 +48,7 @@ export default function Intro({ ...rest }) {
             </Button>
             <Button
               variant="outline"
-              onClick={() => Router.push("/demo")}
+              onClick={() => Router.push("/")}
               colorScheme="teal"
               w={36}
               h={12}
