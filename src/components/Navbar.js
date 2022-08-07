@@ -125,13 +125,13 @@ export default function Navbar({ whiteNav, ...rest }) {
                 ))}
               </VStack>
               <VStack spacing={3}>
-                <Link href="/signin" passHref={true}>
+                <Link href="https://dashboard.usemangrove.com/signin" passHref={true}>
                   <ChakraLink fontSize="xl" fontWeight="600" color="gray.600">
                     Sign in
                   </ChakraLink>
                 </Link>
                 <Button
-                  onClick={() => Router.push("/signup")}
+                  onClick={() => Router.push("https://dashboard.usemangrove.com")}
                   colorScheme="teal"
                   w={36}
                   h={12}

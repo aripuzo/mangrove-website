@@ -22,12 +22,12 @@ const Meta = ({
       <link rel="icon" href="/favicon.ico" />
 
       {/* SEO Stuff */}
-      <title>Mangrove</title>
+      <title>{title}</title>
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-title" content="Mangrove" />
 
       <meta name="title" content={title} />
-      <meta name="author" content="Antonio Okoro" />
+      <meta name="author" content="Mangrove" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow" />
@@ -46,23 +46,21 @@ const Meta = ({
       <meta name="twitter:title" content={twitterTitle} />
       <meta name="twitter:description" content={twitterDescription} />
       <meta name="twitter:image" content={twitterImage} />
-      <title>{title}</title>
     </Head>
   );
 };
 Meta.defaultProps = {
-  title: "Mangrove",
+  title: process.env.NEXT_PUBLIC_TITLE,
   description: process.env.NEXT_PUBLIC_DESCRIPTION,
   image: process.env.NEXT_PUBLIC_IMAGE,
   keywords: process.env.NEXT_PUBLIC_KEYWORDS,
-  title: process.env.NEXT_PUBLIC_TITLE,
-  ogDescription: process.env.NEXT_PUBLIC_OGDESCRIPTION,
-  ogImage: process.env.NEXT_PUBLIC_OGIMAGE,
-  ogTitle: process.env.NEXT_PUBLIC_OGTITLE,
-  ogType: process.env.NEXT_PUBLIC_OGTYPE,
-  ogUrl: process.env.NEXT_PUBLIC_OGURL,
-  twitterTitle: process.env.NEXT_PUBLIC_TWITTERTITLE,
-  twitterDescription: process.env.NEXT_PUBLIC_TWITTERDESCRIPTION,
-  twitterImage: process.env.NEXT_PUBLIC_TWITTERIMAGE,
+  ogDescription: process.env.NEXT_PUBLIC_OG_DESCRIPTION,
+  ogImage: process.env.NEXT_PUBLIC_OG_IMAGE,
+  ogTitle: process.env.NEXT_PUBLIC_OG_TITLE,
+  ogType: process.env.NEXT_PUBLIC_OG_TYPE,
+  ogUrl: process.env.NEXT_PUBLIC_OG_URL,
+  twitterTitle: process.env.NEXT_PUBLIC_TWITTER_TITLE,
+  twitterDescription: process.env.NEXT_PUBLIC_TWITTER_DESCRIPTION,
+  twitterImage: process.env.NEXT_PUBLIC_TWITTER_IMAGE,
 }
 export default Meta;

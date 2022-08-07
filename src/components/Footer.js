@@ -54,12 +54,12 @@ export const Footer = ({ ...rest }) => {
           <Text pb={4} color="gray.600" fontSize={["xl", "2xl", "4xl"]}>
             with&nbsp;
             <Box as="span" fontWeight="bold" color="teal.500">
-              2%
+              1%
             </Box>
-            &nbsp;platform fee
+            &nbsp;platform fee for escrow service
           </Text>
           <Button
-            onClick={() => Router.push("/signup")}
+            onClick={() => Router.push("https://dashboard.usemangrove.com")}
             colorScheme="teal"
             w={40}
             h={12}

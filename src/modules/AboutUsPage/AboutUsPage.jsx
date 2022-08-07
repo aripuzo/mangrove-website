@@ -41,7 +41,7 @@ export default function AboutUsPage() {
             fontSize={["1.5rem", "2rem", "2rem"]}
             color="dullTeal.200"
           >
-            Joe and Ari formed a team to solve contracting and payment problems
+            Joe and Pelumi formed a team to solve contracting and payment problems
             businesses and individuals experience. The idea was to design a
             product that allows clients and contractors focus on what really
             matters to them, while we do the legwork of handling contracts and

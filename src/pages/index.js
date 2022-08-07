@@ -8,7 +8,7 @@ const IndexPage = ({ landingPage }) => {
   console.log(landingPage === 'home');
   return landingPage === "home" ? (
     <PageLayout>
-      <Meta title="Mangrove" />
+      <Meta/>
       <LandingPage />
     </PageLayout>
   ) : (
